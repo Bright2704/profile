@@ -3,13 +3,13 @@ import React from 'react'
 
 type Props = {}
 
-export default async function about({}: Props) {
+export default async function work({}: Props) {
     await delay(1000)
 
   return (
-    <div>about
+    <div>work
         <ul>
-            <li>about</li>
+            <li>work</li>
         </ul>
     </div>
   )

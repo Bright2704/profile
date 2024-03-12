@@ -1,33 +1,41 @@
 import Image from 'next/image'
 
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Link } from '@mui/material'
+import { Metadata } from 'next'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
-//layout เอาไว้ประกาศ  navbar , header , footer และ ส่วนที่เหลือ
+
+export const metadata: Metadata = {
+  title: 'Bright_KT',
+  description: 'Bright_KT',
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-
-
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <Image
-                src="https://4.bp.blogspot.com/-U_cA_ieS9EA/V9luo62UmLI/AAAAAAAAMNQ/NLtCABaivg0mjUa1wC0XKVFebLwhcqyPgCLcB/s1600/kimi-no-na-wa-13.jpg"
-                width={200}
-                height={100}
-                alt="POSPOS logo"
+              
+              <img
+                src="http://cdn.jsdelivr.net/gh/Bright2704/images/275538619_3103970746549508_6805856951783035023_n.png" 
+                alt=""
+                width={50}
+                height={50}
+                className="rounded-full"
               />
+            
+            
               <span className="ml-7 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bright_KT</span>
             </Link>
             <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -47,9 +55,7 @@ export default function RootLayout({
                 <li>
                   <Link href="/work" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Work</Link>
                 </li>
-                <li>
-                  <Link href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">...</Link>
-                </li>
+               
                 <li>
                   <Link href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
                 </li>
